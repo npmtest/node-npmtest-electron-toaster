@@ -1,1 +1,40 @@
-{     "devDependencies": {         "electron-toaster": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-electron-toaster",     "homepage": "https://github.com/npmtest/node-npmtest-electron-toaster",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-electron-toaster.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "test coverage for [electron-toaster (v2.0.4)](https://github.com/s-a/electron-toaster#readme) [![npm package](https://img.shields.io/npm/v/npmtest-electron-toaster.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-electron-toaster) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-electron-toaster.svg)](https://travis-ci.org/npmtest/node-npmtest-electron-toaster)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "electron-toaster": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-electron-toaster",
+    "keywords": [
+        "coverage",
+        "test",
+        "electron-toaster"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_electron_toaster.js",
+    "name": "npmtest-electron-toaster",
+    "nameAlias": "npmtest_electron_toaster",
+    "nameOriginal": "npmtest-electron-toaster",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-electron-toaster.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
