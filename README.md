@@ -1,4 +1,7 @@
-# test coverage for  [electron-toaster (v2.0.4)](https://github.com/s-a/electron-toaster#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-electron-toaster.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-electron-toaster) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-electron-toaster.svg)](https://travis-ci.org/npmtest/node-npmtest-electron-toaster)
+# npmtest-electron-toaster
+
+#### basic test coverage for  [electron-toaster (v2.0.4)](https://github.com/s-a/electron-toaster#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-electron-toaster.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-electron-toaster) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-electron-toaster.svg)](https://travis-ci.org/npmtest/node-npmtest-electron-toaster)
+
 #### A simple toaster for electron
 
 [![NPM](https://nodei.co/npm/electron-toaster.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/electron-toaster)
@@ -32,47 +35,31 @@
 ```json
 
 {
-    "author": {
-        "name": "Stephan Ahlf",
-        "url": "https://github.com/s-a"
-    },
-    "bugs": {
-        "url": "https://github.com/s-a/electron-toaster/issues"
-    },
-    "dependencies": {},
+    "name": "electron-toaster",
+    "version": "2.0.4",
     "description": "A simple toaster for electron",
-    "devDependencies": {},
-    "directories": {},
-    "dist": {
-        "shasum": "ac7d7bb9f7ab04502972315502e912c767a4dfb2",
-        "tarball": "https://registry.npmjs.org/electron-toaster/-/electron-toaster-2.0.4.tgz"
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "bump": "npm version patch && git push && git push --tags && npm publish"
     },
-    "gitHead": "30e460ef590ac7db95fc8b4890f8c5b3c9c1515d",
-    "homepage": "https://github.com/s-a/electron-toaster#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/s-a/electron-toaster.git"
+    },
     "keywords": [
         "electron",
         "toaster",
         "notify",
         "desktop-notification"
     ],
+    "author": "Stephan Ahlf <stephan.ahlf@gmail.com> (https://github.com/s-a)",
     "license": "MIT",
-    "main": "index.js",
-    "maintainers": [
-        {
-            "name": "s-a"
-        }
-    ],
-    "name": "electron-toaster",
-    "optionalDependencies": {},
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/s-a/electron-toaster.git"
+    "bugs": {
+        "url": "https://github.com/s-a/electron-toaster/issues"
     },
-    "scripts": {
-        "bump": "npm version patch && git push && git push --tags && npm publish",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "version": "2.0.4"
+    "homepage": "https://github.com/s-a/electron-toaster#readme",
+    "bin": {}
 }
 ```
 
